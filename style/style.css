@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: monospace;
+}
+
+header{
+  height: 90px;
+  text-align: center;
+  line-height: 90px;
+  color: #fff;
+  background-color: gainsboro;
+  box-shadow: 0px 0px 10px gainsboro;
+}
+
+.container-general{
+  height: calc(100vh - 90px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont-game{
+  width: 70%;
+  min-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+}
+
+.cont-game .game-user{
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cont-game .game-user .player-name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.cont-game .game-user .player-name h2{
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.cont-game .game-user .player-name p{
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cont-game .game-user i{
+  font-size: 14rem;
+}
+
+.cont-game .game-user.user i{
+ transform: rotate(90deg);
+}
+
+.cont-game .game-user.user i.fa-hand-scissors{
+  transform: rotate(180deg) scaleY(-1);
+}
+
+.cont-game .game-user.pc i{
+ transform: rotate(270deg) scaleX(-1);
+}
+
+.cont-game .game-user.pc i.fa-hand-scissors{
+  transform: rotate(0deg)
+}
+
+.cont-game .game-user i.fa-gamepad{
+  transform: rotate(0deg);
+}
+
+.container-btn{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.container-btn .start-btn{
+  padding: 9px 12px;
+  border-radius: 15px;
+  border: 1px solid gainsboro;
+  font-size: 1rem;
+  box-shadow: 0px 0px 14px gainsboro;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.container-btn .start-btn:hover{
+  color: #fff;
+}
+
+.container-btn .control-btns button{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid gainsboro;
+  font-size: 1.5rem;
+}
+
+.container-btn .control-btns button:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 14px gainsboro;
+}
+
+.shake-animation{
+  animation: shakeIcon .3s infinite;
+}
+
+@keyframes shakeIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.d-none{
+  display: none;
+}
